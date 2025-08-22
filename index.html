@@ -2,30 +2,27 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <title>Soupon2gou Portfolio - 動画編集・ゲーム開発・研究活動</title>
+  <title>Soupon2gou-Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="動画編集・音MAD制作、ゲーム開発、オープンソースツール開発、画像処理・6DoF Pose Estimation研究などの作品をまとめたポートフォリオサイト">
   <meta name="keywords" content="動画編集,音MAD,ゲーム開発,Unity,画像処理,6DoF,Pose Estimation,TouchDesigner,Computer Vision,ML">
   <meta name="author" content="Soupon2gou">
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://soupon2gou-portfolio.pages.dev/">
+  <meta property="og:url" content="https://soupon2gou.github.io/portfolio/">
   <meta property="og:title" content="Soupon2gou Portfolio - 動画編集・ゲーム開発・研究活動">
   <meta property="og:description" content="動画編集・音MAD制作、ゲーム開発、オープンソースツール開発、画像処理・6DoF Pose Estimation研究などの作品をまとめたポートフォリオサイト">
-  <meta property="og:image" content="https://soupon2gou-portfolio.pages.dev/data/bocchi.png">
+  <meta property="og:image" content="https://soupon2gou.github.io/portfolio/data/bocchi.png">
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://soupon2gou-portfolio.pages.dev/">
+  <meta property="twitter:url" content="https://soupon2gou.github.io/portfolio/">
   <meta property="twitter:title" content="Soupon2gou Portfolio - 動画編集・ゲーム開発・研究活動">
   <meta property="twitter:description" content="動画編集・音MAD制作、ゲーム開発、オープンソースツール開発、画像処理・6DoF Pose Estimation研究などの作品をまとめたポートフォリオサイト">
-  <meta property="twitter:image" content="https://soupon2gou-portfolio.pages.dev/data/bocchi.png">
+  <meta property="twitter:image" content="https://soupon2gou.github.io/portfolio/data/bocchi.png">
   
-  <!-- 置き換え先のR2カスタムドメインに合わせて変更（例：assets.example.com） -->
-   
-  <link rel="preconnect" href="https://pub-ab791892d08348f0b0abf7bc94bc05aa.r2.dev">
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <header class="site-header">
@@ -37,7 +34,6 @@
         <a href="#contact" class="nav-link">Contact</a>
       </div>
     </nav>
-    <p class="site-lead">Computer Vision / Unity / ML Projects</p>
   </header>
 
   <main>
@@ -45,21 +41,23 @@
       <h1>Works</h1>
       
       <!-- カテゴリフィルタ -->
-      <div class="filter-tabs">
-        <button class="filter-btn active" data-category="all">すべて</button>
-        <button class="filter-btn" data-category="video">動画編集・音MAD</button>
-        <button class="filter-btn" data-category="game">ゲーム開発</button>
-        <button class="filter-btn" data-category="tools">GitHubツール</button>
-        <button class="filter-btn" data-category="research">研究活動</button>
+      <div class="filter-buttons">
+        <!-- JavaScriptで自動生成されます -->
       </div>
       
-      <div id="grid" class="grid"><!-- JSでギャラリーを生成 --></div>
+      <div class="gallery-grid">
+        <!-- JavaScriptでギャラリーを生成 -->
+      </div>
     </section>
 
     <section id="about" class="section">
       <h1>About</h1>
       <p>
-        動画編集・音MAD制作、ゲーム開発、オープンソースツール開発、そして画像処理・6DoF Pose Estimation・Unity/TouchDesignerでのリアルタイム表現など、幅広い分野での研究・制作活動を行っています。技術と創造性を融合させた作品の抜粋を掲載しています。
+        創作: 動画編集, DTM, Unityを用いたゲーム制作, 便利ツール制作
+        <br><br>
+        趣味: 音mad, ブルアカ, ぼっち・ざ・ろっく, 旅行, ガジェット, VALORANT, VRChat, 読書
+        <br><br>
+        今後の予定: DJ/VJの活動, 喜多郁代合作(やりたすぎ), 学内合作
       </p>
     </section>
 
@@ -68,17 +66,17 @@
       <div class="contact-info">
         <p>お仕事のご依頼やご質問がございましたら、お気軽にお声がけください。</p>
         <div class="contact-links">
-          <a href="mailto:contact@example.com" class="contact-link">
+          <a href="mailto:Soupon2gou@gmail.com" class="contact-link">
             <span class="contact-icon">✉</span>
             Email
           </a>
           <a href="https://github.com/soupon2gou" class="contact-link" target="_blank" rel="noopener">
-            <span class="contact-icon">🔗</span>
+            <span class="contact-icon">🐈</span>
             GitHub
           </a>
           <a href="https://twitter.com/soupon2gou" class="contact-link" target="_blank" rel="noopener">
             <span class="contact-icon">🐦</span>
-            Twitter
+            X(Twitter)
           </a>
         </div>
       </div>
@@ -86,10 +84,12 @@
   </main>
 
   <!-- ライトボックス -->
-  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="image viewer">
-    <button class="lightbox__close" aria-label="close" onclick="closeLightbox()">×</button>
-    <img id="lightboxImg" alt="">
-    <p id="lightboxCap" class="lightbox__cap"></p>
+  <div id="lightbox">
+    <div id="lightbox-content">
+      <button class="lightbox-close">&times;</button>
+      <div id="lightbox-media"></div>
+      <div id="lightbox-caption"></div>
+    </div>
   </div>
 
   <footer class="site-footer">
@@ -97,8 +97,8 @@
   </footer>
 
   <!-- 設定ファイル（必ず main.js より先に読み込む） -->
-  <script src="/config.js"></script>
-  <script src="/main.js"></script>
+  <script src="./config.js"></script>
+  <script src="./main.js"></script>
   <noscript>JavaScript を有効にするとギャラリーが表示されます。</noscript>
 </body>
 </html>
