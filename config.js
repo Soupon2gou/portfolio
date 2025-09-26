@@ -106,14 +106,24 @@ const GALLERY_ITEMS = {
   // ======= 動画編集・音MAD =======
   video: [
     {
+      path: "data/Do_Back_Burn.mp4",
+      caption: "ひゃああっ！？うわああん！ひゃうぅぅ...",
+      alt: "",
+      type: "video",
+      link: "https://www.nicovideo.jp/watch/sm45402293",
+      tags: ["音mad"],
+      description: "",
+      isCollab: false // 個人作
+    },
+    {
       path: "data/ikuyo.mp4",
       caption: "【ぼっち向け】IKUYO",
       alt: "IKUYO",
       type: "video",
       link: "https://www.nicovideo.jp/watch/sm44752007",
       tags: ["音mad"],
-  description: "",
-  isCollab: false // 個人作
+      description: "",
+      isCollab: false // 個人作
     },
     {
       path: "data/kitan-fire.mp4",
@@ -175,26 +185,26 @@ const GALLERY_ITEMS = {
   description: "",
   isCollab: true // 合作（必要に応じて true/false を変更）
     },
-    {
-      path: "data/thum_sm43981913.jpg", 
-      caption: "07晩合作/オナ禁合作",
-      alt: "07晩合作/オナ禁合作",
-      type: "image",
-      link: "https://www.nicovideo.jp/watch/sm43981913",
-      tags: ["音mad"],
-  description: "",
-  isCollab: true // 合作（必要に応じて true/false を変更）
-    },
-    {
-      path: "data/thum_sm43663959.jpg", 
-      caption: "【二晩合作】エロい英論、エ論ｗ合作",
-      alt: "【二晩合作】エロい英論、エ論ｗ合作",
-      type: "image",
-      link: "https://www.nicovideo.jp/watch/sm43663959",
-      tags: ["音mad"],
-  description: "",
-  isCollab: true // 合作（必要に応じて true/false を変更）
-    },
+  //   {
+  //     path: "data/thum_sm43981913.jpg", 
+  //     caption: "07晩合作/オナ禁合作",
+  //     alt: "07晩合作/オナ禁合作",
+  //     type: "image",
+  //     link: "https://www.nicovideo.jp/watch/sm43981913",
+  //     tags: ["音mad"],
+  // description: "",
+  // isCollab: true // 合作（必要に応じて true/false を変更）
+  //   },
+  //   {
+  //     path: "data/thum_sm43663959.jpg", 
+  //     caption: "【二晩合作】エロい英論、エ論ｗ合作",
+  //     alt: "【二晩合作】エロい英論、エ論ｗ合作",
+  //     type: "image",
+  //     link: "https://www.nicovideo.jp/watch/sm43663959",
+  //     tags: ["音mad"],
+  // description: "",
+  // isCollab: true // 合作（必要に応じて true/false を変更）
+  //   },
     {
       path: "data/thum_sm43407552.png", 
       caption: "スーパースター合作",
