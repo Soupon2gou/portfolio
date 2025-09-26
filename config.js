@@ -1,46 +1,18 @@
-// ======= GitHub Pages専用設定 =======
-// 
-// 【GitHub PagesとCloudflare Pagesの違い】
-// - GitHub Pages: GitHubが提供する無料の静的サイトホスティング
-// - Cloudflare Pages: Cloudflareが提供する高性能CDN付きホスティング
-// 
-// 【設定の違いの理由】
-// 1. GitHub Pagesは画像変換機能がない（Cloudflareは有料で提供）
-// 2. GitHub Pagesはシンプルな静的ファイル配信のみ
-// 3. 相対パスの使用が推奨される
-
 // サイトのドメイン名を動的に取得
-// window.location.hostnameでブラウザから現在のドメインを取得
-// 例: "soupon2gou.github.io" や "localhost"
 const SITE_DOMAIN = window.location.hostname;
 
 // アセット（画像・動画）のドメイン設定
-// GitHub Pagesでは同じドメインから配信するため空文字
-// Cloudflareの場合はCDNドメインを指定していた
 const ASSETS_DOMAIN = "";
 
 // 画像変換機能の使用フラグ
-// GitHub Pages: 画像変換機能なし → false
-// Cloudflare Pages: 有料の画像変換機能あり → true（有料プランの場合）
 const USE_TRANSFORM = false;
 
 // サムネイル画像の幅設定（ピクセル）
-// GitHub Pagesでは元画像をそのまま使用するため、適度なサイズに設定
-// 600px: モバイルでも快適に表示できるサイズ
 const THUMB_WIDTH = 600;
 
 // フルサイズ画像の幅設定（ピクセル）
-// ライトボックス表示時の最大幅
-// 1200px: 一般的なデスクトップ画面で適切なサイズ
 const FULL_WIDTH = 1200;
 
-// ======= カテゴリ定義 =======
-// 
-// 【カテゴリシステムの利点】
-// 1. 新しいカテゴリを簡単に追加できる
-// 2. カテゴリごとの設定を一元管理
-// 3. フィルタボタンの自動生成が可能
-// 4. 多言語対応も容易
 
 const CATEGORIES = {
   // カテゴリID: { 表示名, 説明, 色設定 }
@@ -108,7 +80,7 @@ const GALLERY_ITEMS = {
     {
       path: "data/Do_Back_Burn.mp4",
       caption: "ひゃああっ！？うわああん！ひゃうぅぅ...",
-      alt: "",
+      alt: "aaa",
       type: "video",
       link: "https://www.nicovideo.jp/watch/sm45402293",
       tags: ["音mad"],
